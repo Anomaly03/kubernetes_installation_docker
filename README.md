@@ -1,4 +1,7 @@
 ﻿# Kubernetes Installation on Ubuntu 22.04/24.04
+Anggota Grup:
+1. Muhammad Fatih Satrio (235150200111018)
+2. Muhammad Farid Ramdhani (235150207111018)
 
 Get the detailed information about the installation from the below-mentioned websites of **Docker** and **Kubernetes**.
 
