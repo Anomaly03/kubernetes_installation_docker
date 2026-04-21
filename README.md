@@ -28,7 +28,7 @@ gpg --no-default-keyring --keyring ./docker.gpg --export > ./docker-archive-keyr
 
 sudo mv ./docker-archive-keyring.gpg /etc/apt/trusted.gpg.d/
 ```
-![image](https://i.imgur.com/cnqZqMe)
+![image](https://i.imgur.com/cnqZqMe.png)
 
 > Add the docker repository and install docker
 
@@ -41,9 +41,9 @@ sudo apt install git wget curl socat -y
 sudo apt install -y docker-ce
 
 ```
-![image](https://i.imgur.com/NxP9PYB)
+![image](https://i.imgur.com/NxP9PYB.png)
 ...
-![image](https://i.imgur.com/dcjdGGH)
+![image](https://i.imgur.com/dcjdGGH.png)
 
 **To install cri-dockerd for Docker support**
 
