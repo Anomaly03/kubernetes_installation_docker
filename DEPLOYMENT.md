@@ -26,17 +26,19 @@ kubectl delete secret mysql-secret
  git clone https://github.com/Widhi-yahya/kubernetes_installation_docker.git
 ```
 Navigate to the app directory and build the Docker image:
-
+<!-- Dokumentasi: https://imgur.com/a/tis8fYM -->
 ```bash
 # Navigate to app directory
 cd k8s-login-app/app
+# Dokumentasi: https://imgur.com/a/tis8fYM
 
 # Build Docker image
 docker build -t login-app:latest .
+# Dokumentasi: https://imgur.com/a/tis8fYM
 
 # Save Docker image as TAR file for distribution to worker nodes
 docker save login-app:latest > login-app.tar
-```
+# Dokumentasi: https://imgur.com/a/tis8fYM```
 
 If your worker nodes don't share the Docker registry with your control plane, transfer and load the image on all nodes:
 
@@ -55,8 +57,10 @@ Create a directory on your worker node to store MySQL data:
 ```bash
 # Create a directory on your worker node for MySQL data (execute on worker node)
 sudo mkdir -p /mnt/data
+# Dokumentasi: https://imgur.com/a/tis8fYM
 sudo chmod 777 /mnt/data
 ```
+<!-- Dokumentasi: https://imgur.com/a/tis8fYM -->
 
 ## 4. Deploy MySQL Database
 
