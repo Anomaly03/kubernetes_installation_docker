@@ -78,6 +78,10 @@ sudo systemctl enable cri-docker.service
 sudo systemctl enable --now cri-docker.socket
 
 ```
+![image](https://i.imgur.com/7o5gNO0.png)
+...
+![image](https://i.imgur.com/loouuLd.png)
+![image](https://i.imgur.com/R4iTARP.png)
 
 > Add the GPG key for kubernetes
 
@@ -97,6 +101,7 @@ echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 # Update the repositiries
 sudo apt-get update
 ```
+![image](https://i.imgur.com/M9QJ8IE.png)
 
 > Install  Kubernetes packages.
 
@@ -110,6 +115,9 @@ sudo apt-get install -y kubelet kubeadm kubectl
 ```bash
 sudo apt-mark hold docker-ce kubelet kubeadm kubectl
 ```
+
+![image](https://i.imgur.com/NEVXxqn.png)
+![image](https://i.imgur.com/RaoNDve.png)
 
 > Enable the iptables bridge
 
@@ -132,6 +140,10 @@ EOF
 # Apply sysctl params without reboot
 sudo sysctl --system
 ```
+
+![image](https://i.imgur.com/KT5wDdT.png)
+![image](https://i.imgur.com/3a5OIJu.png)
+
 ### Disable SWAP
 > Disable swap on controlplane and dataplane nodes
 
@@ -143,6 +155,8 @@ sudo swapoff -a
 sudo vim /etc/fstab
 # comment the line which starts with **swap.img**.
 ```
+
+![image](https://i.imgur.com/NEhzMgz.png)
 
 ### On the Control Plane server (Master node)
 
@@ -164,6 +178,10 @@ sudo kubeadm init --apiserver-advertise-address=<control_plane_ip> --cri-socket 
 kubeadm join <control_plane_ip>:6443 --token 31rvbl.znk703hbelja7qbx --cri-socket unix:///var/run/cri-dockerd.sock --discovery-token-ca-cert-hash sha256:3dd5f401d1c86be4axxxxxxxxxx61ce965f5xxxxxxxxxxf16cb29a89b96c97dd
 ```
 
+![image](https://i.imgur.com/CWIBDkl.png)
+...
+![image](https://i.imgur.com/zBwAJpo.png)
+
 > To start using the cluster with current user.
 
 ```bash
@@ -184,6 +202,8 @@ curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/cu
 kubectl create -f custom-resources.yaml
 
 ```
+
+![image](https://i.imgur.com/HsqEKnQ.png)
 
 > Check the nodes
 
