@@ -94,7 +94,7 @@ kubectl apply -f k8s/web-service.yaml
 kubectl get pods -l app=login-app
 ```
 
-![image](https://i.imgur.com/rosWTyO.png)
+![image](https://i.imgur.com/iIGNlvy.png)
 
 ## 6. Access the Application
 
