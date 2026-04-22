@@ -233,6 +233,8 @@ sudo kubeadm join $controller_private_ip:6443 --token $token --discovery-token-c
 kubeadm token create --print-join-command
 ```
 
+![image](https://i.imgur.com/iIGNlvy.png)
+
 ### To install metrics server (Master node)
 
 ```bash
