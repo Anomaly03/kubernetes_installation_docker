@@ -94,6 +94,8 @@ kubectl apply -f k8s/web-service.yaml
 kubectl get pods -l app=login-app
 ```
 
+![image](https://i.imgur.com/rosWTyO.png)
+
 ## 6. Access the Application
 
 The application is exposed through a NodePort service on port 30080. You can access it from either node:
@@ -112,6 +114,9 @@ Both URLs work from any machine on your local network (10.34.7.0/24).
    - Username: `admin`
    - Password: `admin123`
 3. After login, you'll be redirected to the dashboard where you can upload images
+
+![image](https://i.imgur.com/rosWTyO.png)
+![image](https://i.imgur.com/qP0bhy5.png)
 
 ## 8. Important: Calico Networking Configuration
 
@@ -184,6 +189,8 @@ SELECT * FROM users;
 - **Default Credentials**: 
   - Username: `admin`
   - Password: `admin123`
+
+![image](https://i.imgur.com/qP0bhy5.png)
 
 ### Kubernetes Dashboard
 - **URL**: https://10.34.7.115:30119 or https://10.34.7.5:30119
