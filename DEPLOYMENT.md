@@ -25,16 +25,16 @@ kubectl delete secret mysql-secret
 ```bash
  git clone https://github.com/Widhi-yahya/kubernetes_installation_docker.git
 ```
+![image](https://imgur.com/a/ACpem9j)
+
+
 Navigate to the app directory and build the Docker image:
-<!-- Dokumentasi: https://imgur.com/a/tis8fYM -->
 ```bash
 # Navigate to app directory
 cd k8s-login-app/app
-# Dokumentasi: https://imgur.com/a/tis8fYM
 
 # Build Docker image
 docker build -t login-app:latest .
-# Dokumentasi: https://imgur.com/a/tis8fYM
 
 # Save Docker image as TAR file for distribution to worker nodes
 docker save login-app:latest > login-app.tar
@@ -50,6 +50,15 @@ scp login-app.tar user@worker-node:/home/user/
 docker load < login-app.tar
 ```
 
+![image](https://imgur.com/a/6R3CmdW)
+![image](https://imgur.com/a/QyWGB2m)
+![image](https://imgur.com/a/2i49Q9F)
+![image](https://imgur.com/a/9TE4Mhx)
+![image](https://imgur.com/a/1JVHYPI)
+![Hasil build docker as TAR FILE](https://imgur.com/a/9TE4Mhx)
+![Hasil running sudo docker images | grep](https://imgur.com/a/pxXLzbj)
+
+
 ## 3. Prepare Storage for MySQL
 
 Create a directory on your worker node to store MySQL data:
@@ -57,10 +66,9 @@ Create a directory on your worker node to store MySQL data:
 ```bash
 # Create a directory on your worker node for MySQL data (execute on worker node)
 sudo mkdir -p /mnt/data
-# Dokumentasi: https://imgur.com/a/tis8fYM
 sudo chmod 777 /mnt/data
 ```
-<!-- Dokumentasi: https://imgur.com/a/tis8fYM -->
+![Membuat direktori di worker node dan memberi hak akses penuh](https://imgur.com/a/wmmqpVg)
 
 ## 4. Deploy MySQL Database
 
