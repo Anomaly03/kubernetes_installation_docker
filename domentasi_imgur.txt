@@ -4,20 +4,20 @@
 ![Cloning repo](https://i.imgur.com/qFymZ0z.png)
 
 2. Navigate to app directory
-![Masuk Direktori](https://imgur.com/a/6R3CmdW)
+![Masuk Direktori](https://i.imgur.com/VTyexze.png)
 
-3. Build docker image 
-![Build docker](https://imgur.com/a/QyWGB2m)
-https://imgur.com/a/2i49Q9F
-![Hasil build docker](https://imgur.com/a/9TE4Mhx)
-![Status docker](https://imgur.com/a/1JVHYPI)
+3. Build docker image
+![Build docker](https://i.imgur.com/bDawnOi.png)
+![Build docker](https://i.imgur.com/Tti4bDW.png)
+![Hasil build docker](https://i.imgur.com/taUFffH.png)
+![Status docker](https://i.imgur.com/S9lqUfb.png)
 
 4. Save Docker image as TAR file
-![Hasil build docker as TAR FILE](https://imgur.com/a/9TE4Mhx)
-![Hasil running sudo docker images | grep](https://imgur.com/a/pxXLzbj)
+![Hasil build docker as TAR FILE](https://i.imgur.com/taUFffH.png)
+![Hasil running sudo docker images | grep](https://i.imgur.com/6A4erf7.png)
 
 5. Create directory
-![Membuat direktori di worker node dan memberi hak akses penuh](https://imgur.com/a/wmmqpVg)
+![Membuat direktori di worker node dan memberi hak akses penuh](https://i.imgur.com/5MBvVDF.png)
 
 6. Konektivitas node dengan menggunakan tailscale
-![Hasil koneksi antar node](https://imgur.com/a/0f9SsGd)
+![Hasil koneksi antar node](https://i.imgur.com/DM8J5Mq.png)
