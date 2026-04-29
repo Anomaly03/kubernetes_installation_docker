@@ -31,6 +31,8 @@ kubectl delete secret mysql-secret
 
 Navigate to the app directory and build the Docker image:
 
+![Masuk Direktori](https://i.imgur.com/VTyexze.png)
+
 ````bash
 # Navigate to app directory
 cd k8s-login-app/app
@@ -52,13 +54,12 @@ scp login-app.tar user@worker-node:/home/user/
 docker load < login-app.tar
 ````
 
-![image](https://imgur.com/a/6R3CmdW)
-![image](https://imgur.com/a/QyWGB2m)
-![image](https://imgur.com/a/2i49Q9F)
-![image](https://imgur.com/a/9TE4Mhx)
-![image](https://imgur.com/a/1JVHYPI)
-![Hasil build docker as TAR FILE](https://imgur.com/a/9TE4Mhx)
-![Hasil running sudo docker images | grep](https://imgur.com/a/pxXLzbj)
+![Build docker](https://i.imgur.com/bDawnOi.png)
+![Build docker](https://i.imgur.com/Tti4bDW.png)
+![Hasil build docker](https://i.imgur.com/taUFffH.png)
+![Status docker](https://i.imgur.com/S9lqUfb.png)
+![Hasil build docker as TAR FILE](https://i.imgur.com/taUFffH.png)
+![Hasil running sudo docker images | grep](https://i.imgur.com/6A4erf7.png)
 
 ## 3. Prepare Storage for MySQL
 
@@ -70,7 +71,11 @@ sudo mkdir -p /mnt/data
 sudo chmod 777 /mnt/data
 ```
 
-![Membuat direktori di worker node dan memberi hak akses penuh](https://imgur.com/a/wmmqpVg)
+![Membuat direktori di worker node dan memberi hak akses penuh](https://i.imgur.com/5MBvVDF.png)
+
+Connectivity test using tailscale
+
+![Hasil koneksi antar node](https://i.imgur.com/DM8J5Mq.png)
 
 ## 4. Deploy MySQL Database
 
