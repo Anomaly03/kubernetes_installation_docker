@@ -20,16 +20,18 @@ kubectl delete pv mysql-pv
 # Delete secrets
 kubectl delete secret mysql-secret
 ```
+
 ## 2. Build and Load Docker Image
 
 ```bash
  git clone https://github.com/Widhi-yahya/kubernetes_installation_docker.git
 ```
-![image](https://imgur.com/a/ACpem9j)
 
+![image](https://i.imgur.com/qFymZ0z.png)
 
 Navigate to the app directory and build the Docker image:
-```bash
+
+````bash
 # Navigate to app directory
 cd k8s-login-app/app
 
@@ -48,7 +50,7 @@ scp login-app.tar user@worker-node:/home/user/
 
 # On each worker node, load the image
 docker load < login-app.tar
-```
+````
 
 ![image](https://imgur.com/a/6R3CmdW)
 ![image](https://imgur.com/a/QyWGB2m)
@@ -57,7 +59,6 @@ docker load < login-app.tar
 ![image](https://imgur.com/a/1JVHYPI)
 ![Hasil build docker as TAR FILE](https://imgur.com/a/9TE4Mhx)
 ![Hasil running sudo docker images | grep](https://imgur.com/a/pxXLzbj)
-
 
 ## 3. Prepare Storage for MySQL
 
@@ -68,6 +69,7 @@ Create a directory on your worker node to store MySQL data:
 sudo mkdir -p /mnt/data
 sudo chmod 777 /mnt/data
 ```
+
 ![Membuat direktori di worker node dan memberi hak akses penuh](https://imgur.com/a/wmmqpVg)
 
 ## 4. Deploy MySQL Database
@@ -193,14 +195,16 @@ SELECT * FROM users;
 ## 11. Accessing the Application
 
 ### Login Application
+
 - **URL**: http://10.34.7.115:30080 or http://10.34.7.5:30080
-- **Default Credentials**: 
+- **Default Credentials**:
   - Username: `admin`
   - Password: `admin123`
 
 ![image](https://i.imgur.com/qP0bhy5.png)
 
 ### Kubernetes Dashboard
+
 - **URL**: https://10.34.7.115:30119 or https://10.34.7.5:30119
 - **Access Token**: Generate with:
   ```bash
@@ -208,4 +212,7 @@ SELECT * FROM users;
   ```
 
 This completes the deployment of the login web application with MySQL on Kubernetes.
+
+```
+
 ```
